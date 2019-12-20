@@ -10,4 +10,13 @@
 <ion-content>
   <ion-button (click)="scan()">Scan</ion-button>
   barcode : {{ barcode }}
+  <ion-card>
+ 
+    <img src="{{ model?.product.image_ingredients_small_url }}">
+    <ion-list>
+      <ion-item *ngFor="let item of model?.product.ingredients">
+          {{item.text}}
+      </ion-item>
+    </ion-list>
+  </ion-card>
 </ion-content>
