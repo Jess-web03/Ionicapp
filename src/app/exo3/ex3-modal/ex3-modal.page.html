@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>ex3Modal</ion-title>
+    <ion-button slot="end"
+                (click)="dismiss()">Cancel</ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  {{ model?.name }}
+  {{ model?.weight }}
+
+  <img src="{{model?.sprites.front_default}}" alt="">
+  <div style="display: block">
+    <canvas baseChart
+      [datasets]="radarChartData"
+      [options]="radarChartOptions"
+      [labels]="radarChartLabels"
+      [chartType]="radarChartType">
+    </canvas>
+  </div>
+</ion-content>

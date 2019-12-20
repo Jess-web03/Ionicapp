@@ -1,0 +1,54 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+  <ion-menu-button color="tertiary"></ion-menu-button>
+</ion-buttons>
+<ion-title>Exo2: ShoppingList</ion-title>
+
+</ion-toolbar>
+</ion-header>
+
+<ion-content>    
+
+  <p>Ta shopping list</p>   
+
+<ion-item>
+  <ion-label position="floating">Article</ion-label>
+  <ion-input [(ngModel)]="item"></ion-input>
+
+  <ion-button fill="outline"
+color="info"
+(click)="add()"
+[disabled]="item == null"
+slot="end"
+size="block"
+>+</ion-button>
+</ion-item>
+
+<!--je rajoute name pour elem.name, pour voir le nom de l'élément
+sinon je vois object.object-->
+<!--Ensuite isChecked lié à classe:barre-->
+<!-- barre dans scss avec text-decoration: line through-->
+
+<ion-list>
+  <ion-item *ngFor="let elem of listItems">
+    <!--mettre <p> pour separer les elements quand on veut barrer texte et pas toute la ligne-->
+            <p
+            (click)="cocher(elem)"
+            [ngClass]="{'barre': elem.isChecked}">{{elem.name}}</p>
+          
+            <ion-button fill="outline"
+            color="danger"
+            (click)="showAlert(elem)"
+           
+            slot="end"
+            size="block"
+            ><ion-icon name="trash"></ion-icon>Delete</ion-button>
+          
+          
+          
+          </ion-item>
+    
+</ion-list>
+
+</ion-content>

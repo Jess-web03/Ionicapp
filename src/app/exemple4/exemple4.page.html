@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+  <ion-menu-button color="tertiary"></ion-menu-button>
+</ion-buttons>
+<ion-title>Exemple4: ngIf</ion-title>
+
+</ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header (click)="toggle()">
+      <ion-icon 
+        [name]="
+          collapsed ?'arrow-down' : 'arrow-up'"></ion-icon>
+    </ion-card-header>
+    <ion-card-content *ngIf="!collapsed">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat expedita pariatur debitis, libero atque et nesciunt optio aspernatur tenetur cum, impedit quas? Nesciunt praesentium placeat ipsum blanditiis sequi et illum!
+    </ion-card-content>
+  </ion-card>
+</ion-content>

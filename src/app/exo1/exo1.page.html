@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+  <ion-menu-button color="tertiary"></ion-menu-button>
+</ion-buttons>
+<ion-title>Exo1</ion-title>
+
+</ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <p>{{ counter }}</p>
+  <ion-button (click)="start()"
+              color="success"
+              [disabled]="started == true"
+              >Start</ion-button>
+  <ion-button (click)="stop()"
+              color="tertiary"
+              [disabled]="started == false"
+              >Stop</ion-button>
+  <ion-button (click)="reset()"
+              color="danger"
+              [disabled]="counter == 0"
+              >Reset</ion-button>
+</ion-content>

@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+  <ion-menu-button color="tertiary"></ion-menu-button>
+</ion-buttons>
+<ion-title>Event</ion-title>
+
+</ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <p>{{ nombre }}</p>
+  <ion-button (click)="ajouter()"
+              color="tertiary"
+              size="block"
+              fill="outline"
+              [disabled]="nombre > 8">+</ion-button>
+
+<ion-button (click)="diminuer()"
+              color="tertiary"
+              size="block"
+              fill="outline"
+              [disabled]="nombre < 1">-</ion-button>    
+              
+<p (mouseenter)="highlight()"
+  [ngClass]="{'yellow' : isHighlighted == true}">Lorem ipsum blabla</p>              
+</ion-content>

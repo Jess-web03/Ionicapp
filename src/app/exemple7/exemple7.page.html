@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+  <ion-menu-button color="tertiary"></ion-menu-button>
+</ion-buttons>
+<ion-title>Exemple7: Meteo</ion-title>
+
+</ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <input [(ngModel)]="cityName">
+  <button (click)="search()">Rechercher</button>
+
+  <ion-card *ngIf="weather">
+    <ion-header>{{weather.name}}</ion-header>
+    <ion-card-content>
+      <p>Temp Min: {{weather.main.temp_min}} °K</p>
+      <p>Temp Max: {{weather.main.temp_max}} °K</p>
+      <p>Pression: {{weather.main.pressure}} Hpa</p>
+      <img src="http://openweathermap.org/img/wn/{{weather.weather[0].icon}}@2x.png" alt="">
+      
+    
+    </ion-card-content>
+  </ion-card> 
+</ion-content>

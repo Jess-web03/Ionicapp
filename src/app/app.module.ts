@@ -8,14 +8,21 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
+import { HttpClientModule } from '@angular/common/http';
+import { Ex3ModalPage } from './exo3/ex3-modal/ex3-modal.page';
+import { ChartsModule } from 'ng2-charts';
 
 @NgModule({
-  declarations: [AppComponent],
-  entryComponents: [],
+  declarations: [AppComponent, Ex3ModalPage],
+  entryComponents: [
+    Ex3ModalPage
+  ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(),
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    ChartsModule
   ],
   providers: [
     StatusBar,

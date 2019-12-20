@@ -1,0 +1,9 @@
+.barre{
+    text-decoration: line-through;
+}
+ion-toolbar{
+    --background: pink;
+    ion-menu-button{
+        --background: yellow;
+    }
+}

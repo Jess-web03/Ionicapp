@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+  <ion-menu-button color="tertiary"></ion-menu-button>
+</ion-buttons>
+<ion-title>Exo3: Pokemon</ion-title>
+
+</ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+  <ion-button slot="start" 
+              (click)="previous()"
+              [disabled]="!pokemon?.previous">Previous</ion-button>
+  <ion-button slot="end" 
+              (click)="next()"
+              [disabled]="!pokemon?.next">Next</ion-button>
+</ion-item>
+  <ion-list>
+    <ion-item *ngFor="let item of pokemon?.results"
+    (click)="openModal(item.url)">
+      {{ item.name | uppercase }}
+    </ion-item>
+  </ion-list>
+  
+</ion-content>
